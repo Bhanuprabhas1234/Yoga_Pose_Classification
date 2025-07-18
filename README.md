@@ -6,29 +6,30 @@ The project is built with **Flask** for the web interface, and **OpenCV** to cap
 
 ---
 
-🚀 How to Run
+#🚀 **How to Run**
 
 
-1️⃣ Clone the repository:
+**1️⃣ Clone the repository:**
 
 git clone https://github.com/Bhanuprabhas1234/Yoga_Pose_Classification.git
 
 cd Yoga_Pose_Classification
 
-2️⃣ Install required packages:
+**2️⃣ Install required packages:**
 
 pip install -r requirements.txt
 
-3️⃣ Run the Flask app:
+**3️⃣ Run the Flask app:**
 
 python Interface.py
 
-4️⃣ Open your browser:
+**4️⃣ Open your browser:**
 
 Go to http://127.0.0.1:5000/
 
 
-📋 Features
+**📋 Features**
+
 ✅ Real-time yoga pose detection through webcam
 ✅ Shows pose name with confidence score
 ✅ Uses MediaPipe Pose landmarks
@@ -36,11 +37,12 @@ Go to http://127.0.0.1:5000/
 ✅ Simple and easy-to-use web interface
 
 
-🧘 Supported Yoga Poses (9)
+**🧘 Supported Yoga Poses (9)**
 
 Cat Pose , Downward Dog , Goddess , Natarajasana , Navasana , Plank , Tree ,Trikonasana ,Warrior II
 
-🛠 Tech Stack
+**🛠 Tech Stack**
+
 
 Flask
 
@@ -54,8 +56,8 @@ TensorFlow / Keras
 
 Deep Learning (for model training)
 
-
-📸 Screenshots of the Interface:
+**
+📸 Screenshots of the Interface:**
 
 <img width="1891" height="862" alt="image" src="https://github.com/user-attachments/assets/3b40d25d-ffaf-44f9-a220-9638f3ab552b" />
 
