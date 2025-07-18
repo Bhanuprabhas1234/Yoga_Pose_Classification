@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Yoga Pose Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <h1 class="capture-title">Real-Time Yoga Pose Classification</h1>
+        <div class="video-container">
+            <img src="{{ url_for('video_feed') }}" alt="Video Feed" class="video-feed">
+        </div>
+        <div class="button-container">
+            <a href="{{ url_for('index') }}" class="quit-btn">Quit</a>
+            <a href="#" class="reference-btn">Reference Images</a>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="referenceModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-title">Reference Images</div>
+            <div class="pose-image-container">
+                <img src="{{ url_for('static', filename='img/Sir/WarriorII.jpg') }}" alt="Warrior 2 Pose" class="pose-image">
+                <div class="pose-image-caption">Warrior 2 Pose</div>
+            </div>
+            <div class="pose-image-container">
+                <img src="{{ url_for('static', filename='img/Sir/Tree.jpg') }}" alt="Tree Pose" class="pose-image">
+                <div class="pose-image-caption">Tree Pose</div>
+            </div>
+            <div class="pose-image-container">
+                <img src="{{ url_for('static', filename='img/Sir/Trikonasana.jpeg') }}" alt="Trikonasana Pose" class="pose-image">
+                <div class="pose-image-caption">Trikonasana Pose</div>
+            </div>
+            <div class="pose-image-container">
+                <img src="{{ url_for('static', filename='img/Sir/Natrajasana.jpeg') }}" alt="Natrajasana" class="pose-image">
+                <div class="pose-image-caption">Natrajasana</div>
+            </div>
+            <div class="pose-image-container">
+                <img src="{{ url_for('static', filename='img/Sir/Goddess.jpg') }}" alt="Goddess Pose" class="pose-image">
+                <div class="pose-image-caption">Goddess Pose</div>
+            </div>
+            <div class="pose-image-container">
+                <img src="{{ url_for('static', filename='img/Sir/Navasana.jpeg') }}" alt="Boat Pose" class="pose-image">
+                <div class="pose-image-caption">Boat Pose</div>
+            </div>
+            <div class="pose-image-container">
+                <img src="{{ url_for('static', filename='img/Sir/Catpose.jpeg') }}" alt="Cat Pose" class="pose-image">
+                <div class="pose-image-caption">Cat Pose</div>
+            </div>
+            <div class="pose-image-container">
+                <img src="{{ url_for('static', filename='img/Sir/Plank.jpg') }}" alt="Plank" class="pose-image">
+                <div class="pose-image-caption">Plank</div>
+            </div>
+            <div class="pose-image-container">
+                <img src="{{ url_for('static', filename='img/Sir/Downdog.jpg') }}" alt="Downdog Pose" class="pose-image">
+                <div class="pose-image-caption">Downdog Pose</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("referenceModal");
+
+        // Get the button that opens the modal
+        var btn = document.querySelector(".reference-btn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Quit button functionality
+        document.querySelector('.quit-btn').addEventListener('click', () => {
+            fetch('/stop_video').then(() => {
+                window.location.href = "{{ url_for('index') }}";
+            });
+        });
+    </script>
+</body>
+</html>

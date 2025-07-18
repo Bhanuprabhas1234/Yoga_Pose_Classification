@@ -1,0 +1,265 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: auto; /*hidden*/
+    color: white;
+
+}
+
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,121,113,1) 35%, rgba(0,212,255,1) 100%);
+    z-index: -1;
+    animation: animateBackground 20s infinite;
+}
+
+@keyframes animateBackground {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.index-title{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: white;
+    animation: textGlow 2s infinite;
+}
+
+
+.project-title {
+    margin-top: 50px; /* Adjusted to bring the title higher */
+    font-size: 5rem;
+    color: black; /* Black color for the title */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+    filter: blur(1px);
+}
+
+.pose-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust gap between images */
+    margin-top: 10px; /* Adjusted to bring images closer to the title */
+}
+
+.pose-image {
+    width: 120px; /* Adjust image size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visual effect */
+    transition: transform 0.3s;
+}
+
+.pose-image:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    cursor: pointer;
+}
+
+.start-btn{
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 80px;
+   
+}
+.quit-btn, .reference-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px; /* Reduce the margin if it's too large */
+    margin-bottom: 20px; /* Ensure there's enough space at the bottom */
+    background-color: #8B0000; /* Default background color for quit button */
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.6);
+}
+
+.start-btn {
+    background-color: #4CAF50; /* Green color */
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.6); /* Green shadow */
+    color: white;
+    font-size: 20px;
+    padding: 15px 35px;
+    border-radius: 15px;
+    border: 2px solid #388E3C; /* Darker green border */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.start-btn:hover {
+    background-color: #45A049; /* Slightly darker green */
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.8); /* Larger shadow */
+}
+
+
+.quit-btn {
+    margin-top: 10px;
+    margin-right:20px;
+    background-color: #8B0000; /* Dark red color */
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.6);
+}
+
+.quit-btn:hover {
+    background-color: #A52A2A; /* Darker red on hover */
+    transform: scale(1.1);
+}
+
+.reference-btn {
+    margin-top: 10px;
+    background-color: #20B2AA; /* Light Sea Green color */
+    box-shadow: 0 4px 15px rgba(32, 178, 170, 0.6);
+    margin-left:20px;
+}
+
+.reference-btn:hover {
+    background-color: #3CB371; /* Medium Sea Green on hover */
+    transform: scale(1.1);
+}
+
+.video-container {
+    margin-top: 15px; /* Add margin to create space between the title and video */
+    padding: 20px; /* Optional: Add padding around the video container */
+    background-color: 3px rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    border: 5px solid black; /* Add a thick black border */
+}
+
+.video-feed {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pose-image:nth-child(odd) {
+    transform: translateY(20px);
+}
+
+.pose-image:nth-child(even) {
+    transform: translateY(-20px);
+}
+
+/* Animation for FLYCNET */
+.project-title {
+   
+    display: inline-block;
+    animation: floatText 5s infinite;
+    font-size: 4rem;
+    color: #0a0a0a; /* Orange color */
+    text-shadow: 0 0 5px #FFA500, 0 0 10px #FFA500, 0 0 15px #FFA500, 0 0 20px #FFA500, 0 0 25px #FFA500, 0 0 30px #FFA500, 0 0 35px #FFA500;
+}
+
+@keyframes floatText {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    position: relative;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px; /* Maximum width */
+    background-color: #fefefe;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.modal .pose-image {
+    width: 120px;
+    height: auto;
+    margin: 10px;
+    display: inline-block;
+}
+
+.modal .pose-image-container {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+.modal .pose-image-caption {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
