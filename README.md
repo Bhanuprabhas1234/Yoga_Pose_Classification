@@ -6,10 +6,9 @@ The project is built with **Flask** for the web interface, and **OpenCV** to cap
 
 ---
 
-## 🚀 How to Run  
+🚀 How to Run
+1️⃣ Clone the repository:
 
-1️⃣ Clone the repo:  
-```bash
 git clone https://github.com/Bhanuprabhas1234/Yoga_Pose_Classification.git
 cd Yoga_Pose_Classification
 
@@ -23,21 +22,19 @@ python Interface.py
 Go to http://127.0.0.1:5000/
 
 📋 Features
-Real-time yoga pose detection through webcam
+✅ Real-time yoga pose detection through webcam
+✅ Shows pose name with confidence score
+✅ Uses MediaPipe Pose landmarks
+✅ Pre-trained CNN-LSTM model for classification
+✅ Simple and easy-to-use web interface
 
-Shows pose name with confidence score
-
-Uses MediaPipe Pose landmarks
-
-Pre-trained CNN-LSTM model for classification
-
-Simple and easy-to-use web interface
-
-🧘 Supported Yoga Poses-9
-Cat Pose ,Downward Dog ,Goddess ,Natarajasana ,Navasana ,Plank ,Tree ,Trikonasana ,Warrior II
+🧘 Supported Yoga Poses (9)
+Cat Pose , Downward Dog , Goddess , Natarajasana , Navasana , Plank , Tree ,Trikonasana ,Warrior II
 
 🛠 Tech Stack
-Flask ,html
+Flask
+
+HTML / CSS / JS
 
 OpenCV
 
@@ -45,9 +42,10 @@ MediaPipe
 
 TensorFlow / Keras
 
-DeepLearning for Model traning
+Deep Learning (for model training)
 
-Screenshots of the Interface: 
+
+📸 Screenshots of the Interface:
 
 <img width="1891" height="862" alt="image" src="https://github.com/user-attachments/assets/3b40d25d-ffaf-44f9-a220-9638f3ab552b" />
 
